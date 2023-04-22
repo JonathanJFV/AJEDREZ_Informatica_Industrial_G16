@@ -33,6 +33,8 @@ void Mundo::dibuja()
 	*/
 
 	chessboard.dibuja();
+	chessboard.setColor(119, 79, 56,
+	                   230, 181, 126); //tablero de color café
 
 }
 

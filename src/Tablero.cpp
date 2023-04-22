@@ -15,7 +15,7 @@ void Tablero::dibuja() {
             {
                 glDisable(GL_LIGHTING);
                 glBegin(GL_POLYGON);
-                glColor3ub(112, 79, 56); //casilla "negra"
+                glColor3ub(rojo, verde, azul); //casilla para -negras-
                 glVertex3d(fila, columna, 0);
                 glVertex3d(fila, columna + 1, 0);
                 glVertex3d(fila + 1, columna + 1, 0);
@@ -28,7 +28,7 @@ void Tablero::dibuja() {
             {
                 glDisable(GL_LIGHTING);
                 glBegin(GL_POLYGON);
-                glColor3ub(255, 255, 255); //casilla de color blanco
+                glColor3ub(_rojo, _verde, _azul); //casilla para -blancas-
                 glVertex3d(fila, columna, 0);
                 glVertex3d(fila, columna + 1, 0);
                 glVertex3d(fila + 1, columna + 1, 0);
@@ -40,4 +40,11 @@ void Tablero::dibuja() {
     }
 
 
+}
+
+void Tablero::setColor(unsigned char r, unsigned char v, unsigned char a,
+    unsigned char _r, unsigned char _v, unsigned char _a) {
+    rojo = r, _rojo = _r;
+    verde = v, _verde = _v;
+    azul = a, _azul = _a;
 }
