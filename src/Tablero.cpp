@@ -1,10 +1,10 @@
 #include "Tablero.h"
 #include "freeglut.h"
+#pragma warning( disable : 26451 )
 
 // funcion principal que dibuja el Tablero
 void Tablero::dibuja() {
     // TODO: Agregar aquí el código de implementación.
-
 
     for (int fila = 0; fila < 8; fila++)
     {
@@ -39,6 +39,17 @@ void Tablero::dibuja() {
         }
     }
 
+    glDisable(GL_LIGHTING);
+    glBegin(GL_POLYGON);
+    glColor3ub(192, 64, 0); 
+    //glColor3ub(184, 115, 51);
+    glVertex3d(-1, -1, -2);
+    glVertex3d(-1, 9, -2);
+    glColor3ub(184, 115, 51);
+    //glColor3ub(192, 64, 0);
+    glVertex3d(9, 9, -2);
+    glVertex3d(9, -1, -2);
+    glEnd();
 
 }
 

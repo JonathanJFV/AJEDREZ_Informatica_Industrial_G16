@@ -47,7 +47,7 @@ void Mundo::inicializa()
 {
 	x_ojo=4;
 	y_ojo=4;
-	z_ojo=20;
+	z_ojo=16;
 
 	x_obs = 4;
 	y_obs = 4;
