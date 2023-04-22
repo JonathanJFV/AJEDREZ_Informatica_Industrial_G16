@@ -1,8 +1,8 @@
-#include "Tablero.h"
-#include "freeglut.h"
+#include "src\Tablero.h"
+
 
 // funcion principal que dibuja el Tablero
-void Tablero::dibuja() {
+void Tablero::dibuja()
+{
     // TODO: Agregar aquí el código de implementación.
-
 }
