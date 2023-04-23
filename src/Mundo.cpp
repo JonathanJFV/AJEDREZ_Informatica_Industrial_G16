@@ -1,3 +1,8 @@
+#pragma warning( disable : 26451 )
+/* Desbordamiento aritmético: uso del operador "operator" en un valor de byte de tamaño-a y, a continuación,
+conversión del resultado en un valor de byte de tamaño-b.
+Convierta el valor en el tipo más amplio antes de llamar al operador "operator"para evitar el desbordamiento
+*/
 #include "Mundo.h"
 #include "freeglut.h"
 #include <math.h>
