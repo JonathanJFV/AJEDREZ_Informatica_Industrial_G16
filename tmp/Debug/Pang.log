@@ -1,0 +1,13 @@
+﻿  Interaccion.cpp
+  Mundo.cpp
+C:\Users\jonat\Desktop\Ajedrez_Informatica_Industrial\G16\src\Mundo.cpp(86,54): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jonat\Desktop\Ajedrez_Informatica_Industrial\G16\src\Mundo.cpp(86,32): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jonat\Desktop\Ajedrez_Informatica_Industrial\G16\src\Mundo.cpp(90,54): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jonat\Desktop\Ajedrez_Informatica_Industrial\G16\src\Mundo.cpp(90,32): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jonat\Desktop\Ajedrez_Informatica_Industrial\G16\src\Mundo.cpp(94,55): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jonat\Desktop\Ajedrez_Informatica_Industrial\G16\src\Mundo.cpp(94,35): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jonat\Desktop\Ajedrez_Informatica_Industrial\G16\src\Mundo.cpp(98,55): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\jonat\Desktop\Ajedrez_Informatica_Industrial\G16\src\Mundo.cpp(98,35): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  Pang.cpp
+  Generando código...
+  Pang.vcxproj -> C:\Users\jonat\Desktop\Ajedrez_Informatica_Industrial\G16\bin\Pang.exe
