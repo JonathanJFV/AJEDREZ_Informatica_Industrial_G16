@@ -10,8 +10,8 @@ private:
   Pieza();
   Pieza(int x, int y, char c);
   virtual ~Pieza();
-  void setPos();
-  void getPos();
+  void setPos(int x, int y);
+  int getPos();
   void getColor();
 };
 
