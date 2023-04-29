@@ -2,6 +2,7 @@
 
 class Pieza
 {
+private:
   int posx;
   int posy;
   char colorp;
