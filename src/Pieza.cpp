@@ -20,7 +20,6 @@ float Pieza::getPos(float pos)
 {
   if (pos == 1) return x;
   if (pos == 2) return y;
-}
 
 char Pieza::getColor()
 {
