@@ -12,6 +12,6 @@ private:
   virtual ~Pieza();
   void setPos(int x, int y);
   float getPos(float pos);
-  void getColor();
+  char getColor();
 };
 
