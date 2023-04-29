@@ -8,7 +8,6 @@ private:
   char colorp;
  public:
   Pieza();
-  Pieza(int x, int y, char c);
   virtual ~Pieza();
   void setPos(int x, int y);
   float getPos(float pos);
