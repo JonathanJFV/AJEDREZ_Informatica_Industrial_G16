@@ -3,25 +3,34 @@
 
 Pieza::Pieza()
 {
-  
+  tipo = NF;
+	Color = NS;
+	pos_x = -1;
+	pos_y = -1;
 }
 
-Pieza::~Pieza()
+Pieza:: Pieza(TIPO t, COLOR c, int x, int y)
+{
+  tipo = t;
+	Color = c;
+	pos_x = x;
+	pos_y = y;
+}
+
+void Pieza::print()
 {
 }
 
-void Pieza::setPos(int x, int y)
+void Pieza::dibujar()
 {
-  x = posx;
-  y = posy;
 }
 
-float Pieza::getPos(float pos)
+bool Pieza::mover(int x, int y)
 {
-  if (pos == 1) return x;
-  if (pos == 2) return y;
+	return false;
+}
 
-char Pieza::getColor()
+bool Pieza::seleccionar(int x, int y)
 {
-  return colorp;
+	return false;
 }
