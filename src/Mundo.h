@@ -1,6 +1,7 @@
 #include"Tablero.h"
 #include "Casilla.h"
 #include "Peon.h"
+#include "freeglut.h"
 
 class Mundo
 {

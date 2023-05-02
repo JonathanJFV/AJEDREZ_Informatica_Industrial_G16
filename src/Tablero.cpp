@@ -1,5 +1,4 @@
 #include "Tablero.h"
-#include "freeglut.h"
 #pragma warning( disable : 26451 )
 
 // funcion principal que dibuja el Tablero

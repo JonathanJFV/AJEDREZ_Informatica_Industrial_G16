@@ -1,4 +1,6 @@
 #pragma once
+#include "freeglut.h"
+
 class Tablero
 {
 	unsigned char rojo, _rojo;

@@ -25,9 +25,9 @@ class Pieza
     Pieza(TIPO t, COLOR c, int x, int y);
    
   	virtual void print();
-	  virtual void dibujar();
-	  virtual bool mover(int x, int y);//new
-	  virtual bool seleccionar(int x,int y);
+	virtual void dibujar();
+	virtual bool mover(int x, int y);//new
+	virtual bool seleccionar(int x,int y);
   
 protected:
   bool seleccionado;
