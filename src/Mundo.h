@@ -1,4 +1,6 @@
 #include"Tablero.h"
+#include "Casilla.h"
+#include "Peon.h"
 
 class Mundo
 {
@@ -18,4 +20,5 @@ public:
 	float z_obs;
 
 	Tablero chessboard;
+	Casilla piezas;
 };
