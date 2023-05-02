@@ -6,8 +6,8 @@ class Peon:public Pieza
 {
 private:
 //con la libreria de etsidi añade el dibujo de PEON
-	SpriteSequence sprite_peon_blanco{ "imagenes/peon_blanco.png", 1 };
-	SpriteSequence sprite_peon_negro{ "imagenes/peon_negro.png", 1 };
+	SpriteSequence sprite_peon_blanco{ "bin/imagenes/peon_blanco.png", 1 };
+	SpriteSequence sprite_peon_negro{ "bin/imagenes/peon_negro.png", 1 };
   
 public:
 	Peon();
