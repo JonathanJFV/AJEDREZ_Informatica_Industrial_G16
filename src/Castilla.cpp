@@ -13,7 +13,7 @@ void Casilla::destruirContenido()
 	tam = 0;
 }
 
-Figura* Casilla::seleccionar(int x, int y)
+Pieza* Casilla::seleccionar(int x, int y)
 {
 	bool var;
 	Pieza* aux=0;
