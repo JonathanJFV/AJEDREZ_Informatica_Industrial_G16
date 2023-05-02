@@ -1,7 +1,7 @@
 #pragma warning( disable : 26451 )
-/* Desbordamiento aritmÈtico: uso del operador "operator" en un valor de byte de tamaÒo-a y, a continuaciÛn,
-conversiÛn del resultado en un valor de byte de tamaÒo-b.
-Convierta el valor en el tipo m·s amplio antes de llamar al operador "operator"para evitar el desbordamiento
+/* Desbordamiento aritm√©tico: uso del operador "operator" en un valor de byte de tama√±o-a y, a continuaci√≥n,
+conversi√≥n del resultado en un valor de byte de tama√±o-b.
+Convierta el valor en el tipo m√°s amplio antes de llamar al operador "operator"para evitar el desbordamiento
 */
 #include "Mundo.h"
 #include "freeglut.h"
@@ -23,7 +23,7 @@ void Mundo::dibuja()
 
 	//aqui es donde hay que poner el codigo de dibujo
 	//dibujo del suelo
-	
+		
 	/*
 	glDisable(GL_LIGHTING);
 	glBegin(GL_POLYGON);
@@ -39,8 +39,10 @@ void Mundo::dibuja()
 
 	chessboard.dibuja();
 	chessboard.setColor(119, 79, 56,
-	                   230, 181, 126); //tablero de color cafÈ
+	                   230, 181, 126); //tablero de color caf√©
 
+	
+	piezas.dibujar();
 }
 
 void Mundo::mueve()
