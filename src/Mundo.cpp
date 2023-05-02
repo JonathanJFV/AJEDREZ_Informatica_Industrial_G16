@@ -54,6 +54,9 @@ piezas.mover(ratonx, ratony);
 
 void Mundo::inicializa()
 {
+	ratonx = -1;
+	ratony = -1;
+	
 	x_ojo=4;
 	y_ojo=4;
 	z_ojo=16;
@@ -61,6 +64,16 @@ void Mundo::inicializa()
 	x_obs = 4;
 	y_obs = 4;
 	z_obs = 0;
+	
+		for (int i = 0;i<8;i++)
+	{
+		Peon* aux1 = new Peon(Pieza::BLANCO, i, 1);
+		piezas.agregar(aux1);
+		Peon* aux2 = new Peon(Pieza::NEGRO, i, 6);
+		piezas.agregar(aux2);
+	}
+	
+	
 }
 
 void Mundo::raton(int boton, int estado, int _x, int _y)
