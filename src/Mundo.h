@@ -5,6 +5,8 @@
 class Mundo
 {
 public: 
+	void raton(int buton,int estado, int _x, int _y);
+	~Mundo();
 	void tecla(unsigned char key);
 	void inicializa();
 	void rotarOjo();
@@ -18,7 +20,9 @@ public:
 	float x_obs;
 	float y_obs;
 	float z_obs;
-
+	
+protected: 
+	int ratonx,ratony;
 	Tablero chessboard;
 	Casilla piezas;
 };
