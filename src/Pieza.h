@@ -13,12 +13,7 @@ using namespace ETSIDI;
 
 class Pieza
 {
-protected:
-  bool seleccionado;
-  int posx;
-  int posy;
-  TIPO tipo;
-	COLOR Color;
+
   
  public:
 //color de la pieza
@@ -34,6 +29,12 @@ protected:
 	  virtual bool mover(int x, int y);//new
 	  virtual bool seleccionar(int x,int y);
   
+protected:
+  bool seleccionado;
+  int posx;
+  int posy;
+  TIPO tipo;
+  COLOR Color;
 
 };
 
