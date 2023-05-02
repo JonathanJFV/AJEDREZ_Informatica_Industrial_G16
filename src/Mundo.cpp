@@ -47,7 +47,9 @@ void Mundo::dibuja()
 
 void Mundo::mueve()
 {
-
+piezas.mover(ratonx, ratony);
+	ratonx = -1;
+	ratony = -1;
 }
 
 void Mundo::inicializa()
@@ -59,6 +61,34 @@ void Mundo::inicializa()
 	x_obs = 4;
 	y_obs = 4;
 	z_obs = 0;
+}
+
+void Mundo::raton(int boton, int estado, int _x, int _y)
+{
+	if (boton == GLUT_LEFT_BUTTON && estado == GLUT_DOWN)
+	{
+		//cout << _x << "," << _y<< endl;
+
+		for (int i = 0; i < 8; i++)
+		{
+			if (_x > i * 69 + 125 && _x < i * 69 + 125 + 69) {
+				ratonx = i;
+				for (int j = 0; j < 8; j++)
+				{
+					if (_y > j * 69 + 25 && _y < j * 69 + 25 + 69)
+						ratony = 7 - j;
+				}
+			}
+		}
+		cout << _x << "," << _y << endl;
+		cout << ratonx << "," << ratonx << endl;
+
+	}
+}
+
+Mundo::~Mundo()
+{
+	piezas.destruirContenido();
 }
 
 void Mundo::tecla(unsigned char key)
