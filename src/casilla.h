@@ -2,6 +2,9 @@
 #ifndef CASILLA_H
 #define CASILLA_H
 
+#include "Pieza.h"
+#define Max 100
+
 class Casilla
 {
 private:
