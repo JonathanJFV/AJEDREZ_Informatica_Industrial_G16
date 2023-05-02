@@ -3,7 +3,7 @@
 #define CASILLA_H
 
 #include "Pieza.h"
-#define Max 100
+#define MAX 100
 
 class Casilla
 {
