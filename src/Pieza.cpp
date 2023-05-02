@@ -5,16 +5,16 @@ Pieza::Pieza()
 {
   tipo = NF;
 	Color = NS;
-	pos_x = -1;
-	pos_y = -1;
+	posx = -1;
+	posy = -1;
 }
 
 Pieza:: Pieza(TIPO t, COLOR c, int x, int y)
 {
   tipo = t;
 	Color = c;
-	pos_x = x;
-	pos_y = y;
+	posx = x;
+	posy = y;
 }
 
 void Pieza::print()
