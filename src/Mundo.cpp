@@ -22,20 +22,6 @@ void Mundo::dibuja()
 			0.0, 1.0, 0.0);      // definimos hacia arriba (eje Y)    
 
 	//aqui es donde hay que poner el codigo de dibujo
-	//dibujo del suelo
-		
-	/*
-	glDisable(GL_LIGHTING);
-	glBegin(GL_POLYGON);
-		glColor3ub(255,0,0);
-		glVertex3f(-5.0f,0,-5.0f);
-		glVertex3f(-5.0f,0,5.0f);
-		glColor3ub(255,255,0);
-		glVertex3f(5.0f,0,5.0f);	
-		glVertex3f(5.0f,0,-5.0f);
-	glEnd();
-	glEnable(GL_LIGHTING);
-	*/
 
 	chessboard.dibuja();
 	chessboard.setColor(119, 79, 56,
@@ -84,11 +70,11 @@ void Mundo::raton(int boton, int estado, int _x, int _y)
 
 		for (int i = 0; i < 8; i++)
 		{
-			if (_x > i * 69 + 125 && _x < i * 69 + 125 + 69) {
+			if (_x > i * 50 + 194 && _x < (i+1) * 50 + 194 + 69) {
 				ratonx = i;
 				for (int j = 0; j < 8; j++)
 				{
-					if (_y > j * 69 + 25 && _y < j * 69 + 25 + 69)
+					if (_y > j * 50 + 94 && _y < (j+1) * 50 + 94 + 69)
 						ratony = 7 - j;
 				}
 			}

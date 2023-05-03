@@ -1,8 +1,7 @@
 //lista para gestionar las piezas
-#ifndef CASILLA_H
-#define CASILLA_H
 
 #include "Pieza.h"
+
 #define MAX 100
 
 class Casilla
@@ -24,6 +23,3 @@ public:
 	bool mover(int x,int y);//nuevo
 };
 
-
-
-#endif

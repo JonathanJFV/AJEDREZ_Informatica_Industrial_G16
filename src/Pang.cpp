@@ -10,6 +10,8 @@ void OnDraw(void); //esta funcion sera llamada para dibujar
 void OnTimer(int value); //esta funcion sera llamada cuando transcurra una temporizacion
 void OnKeyboardDown(unsigned char key, int x, int y); //cuando se pulse una tecla	
 
+void OnMouseClick(int button, int state, int x, int y);
+
 int main(int argc,char* argv[])
 {
 	//Inicializar el gestor de ventanas GLUT
@@ -31,6 +33,8 @@ int main(int argc,char* argv[])
 	glutDisplayFunc(OnDraw);
 	glutTimerFunc(25,OnTimer,0);//le decimos que dentro de 25ms llame 1 vez a la funcion OnTimer()
 	glutKeyboardFunc(OnKeyboardDown);
+
+	glutMouseFunc(OnMouseClick);
 
 	mundo.inicializa();
 		
@@ -70,4 +74,12 @@ void OnTimer(int value)
 	//no borrar estas lineas
 	glutTimerFunc(25,OnTimer,0);
 	glutPostRedisplay();
+}
+
+
+void OnMouseClick(int button, int state, int x, int y)
+{
+	mundo.raton(button, state, x, y);
+
+	glutPostRedisplay;
 }

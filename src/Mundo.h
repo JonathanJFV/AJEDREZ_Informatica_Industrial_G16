@@ -22,8 +22,10 @@ public:
 	float y_obs;
 	float z_obs;
 	
+	int ratonx, ratony;
+
 protected: 
-	int ratonx,ratony;
+	//int ratonx,ratony;
 	Tablero chessboard;
 	Casilla piezas;
 };

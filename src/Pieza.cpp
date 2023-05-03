@@ -34,3 +34,16 @@ bool Pieza::seleccionar(int x, int y)
 {
 	return false;
 }
+
+
+void Pieza::setPos(float _x, float _y)
+{
+	//posx = _x;
+	//posy = _y;
+}
+
+Vector2D Pieza::getPos()
+{
+	return posicion;
+}
+
