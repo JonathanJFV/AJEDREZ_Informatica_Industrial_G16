@@ -19,7 +19,7 @@ class Pieza
 //color de la pieza
   enum COLOR { NS = -1, BLANCO, NEGRO };
   //tipo de la pieza
-	enum TIPO{NF = -1, PEON};
+	enum TIPO{NF = -1, PEON, ALFIL, CABALLO};
   
     Pieza();
     Pieza(TIPO t, COLOR c, int x, int y);
