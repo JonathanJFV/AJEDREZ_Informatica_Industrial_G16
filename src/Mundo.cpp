@@ -71,6 +71,20 @@ void Mundo::inicializa()
 		piezas.agregar(aux1);
 		Peon* aux2 = new Peon(Pieza::NEGRO, i, 6);
 		piezas.agregar(aux2);
+		if (i == 2 || i == 5)
+		{
+			Alfil* aux1 = new Alfil(Pieza::BLANCO, i, 0);
+			piezas.agregar(aux1);
+			Alfil* aux2 = new Alfil(Pieza::NEGRO, i, 7);
+			piezas.agregar(aux2);
+		}
+		if (i == 1 || i == 6)
+		{
+			Caballo* aux1 = new Caballo(Pieza::BLANCO, i, 0);
+			piezas.agregar(aux1);
+			Caballo* aux2 = new Caballo(Pieza::NEGRO, i, 7);
+			piezas.agregar(aux2);
+		}
 	}
 	
 	
