@@ -1,6 +1,8 @@
 #include"Tablero.h"
 #include "Casilla.h"
 #include "Peon.h"
+#include "Alfil.h"
+#include "Caballo.h"
 
 class Mundo
 {
