@@ -8,13 +8,13 @@
 class Casilla
 {
 private:
-	int fila;    
-	int columna; 
-	int color;
 	bool ocupada;
 	int tam;
 	Pieza* piez[MAX];
 public:
+	int fila;    
+	int columna; 
+	int color;
 	Casilla(int fila, int columna, int color): fila(fila), columna(columna), color(color), ocupada(false), tam(0)
 	{
 		for (int i = 0; i < MAX; i++)
