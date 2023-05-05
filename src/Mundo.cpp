@@ -37,23 +37,32 @@ void Mundo::dibuja()
 
 void Mundo::mueve()
 {
-piezas.mover(ratonx, ratony);
-	ratonx = -1;
-	ratony = -1;
+	if (piezaSeleccionada == false && click == true)
+	{
+
+	}
+
+
+//piezas.mover(ratonx, ratony);
+	//ratonx = -1;
+	//ratony = -1;
+
+
+
+
 }
 
 void Mundo::inicializa()
 {
+	x_ojo = 4; y_ojo = 4; z_ojo = 16;
+	x_obs = 4; y_obs = 4; z_obs = 0;
+
 	ratonx = -1;
 	ratony = -1;
-	
-	x_ojo=4;
-	y_ojo=4;
-	z_ojo=16;
 
-	x_obs = 4;
-	y_obs = 4;
-	z_obs = 0;
+	piezaSeleccionada = false;
+	click = false;
+
 	
 		for (int i = 0;i<8;i++)
 	{
@@ -83,10 +92,15 @@ void Mundo::inicializa()
 void Mundo::raton(int boton, int estado, int _x, int _y)
 {
 	if (boton == GLUT_LEFT_BUTTON && estado == GLUT_DOWN)
-	{	//Se obtienen coordenadas relativas a la pantalla
-		//Cursor_x y Cursor_y representan las posiciones
-		//tamaño de casilla (194, 94)
-		//                  (244, 144)
+	{	
+		//comprueba si el click del raton está fuera del tablero
+		if ((_x < 194 || _x < 604) || (_y < 94 || _y>504))
+			click = false;
+
+		/*Se obtienen coordenadas relativas a la pantalla
+		Cursor_x y Cursor_y representan las posiciones
+		tamaño de casilla (194, 94)
+		                  (244, 144)*/
 		for (int i = 0; i < 8; i++)
 		{
 			if (_x > (i + 2)*50 + 94 && _x < (i + 3) * 50 + 94) {
@@ -100,8 +114,11 @@ void Mundo::raton(int boton, int estado, int _x, int _y)
 		}
 		cout << _x << "," << _y << endl;
 		cout << ratonx << "," << ratony << endl;
-
+		click = true;
 	}
+
+		//AUUN POR COMPROBAR POSIBLES INTERACCIONES CON OTOS BOTONES DEL RATON
+
 }
 
 Mundo::~Mundo()

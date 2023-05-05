@@ -98,6 +98,14 @@ bool Peon::mover(int x, int y)
 
 bool Peon::seleccionar(int x, int y)
 {
+
+	/*
+		if (posx == x && posy == y)
+	{
+
+	}
+	*/
+	///AUN POR CORREGIR
 	if (posx == x && posy == y)
 	{
 		if (seleccionado == false)

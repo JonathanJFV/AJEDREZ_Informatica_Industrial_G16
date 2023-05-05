@@ -16,6 +16,7 @@ public:
 	void dibujar();
 	void destruirContenido();
 	Pieza* seleccionar(int x, int y);//nuevo
+	Pieza* elegirPieza(int _x, int _y); ///CONFIRMAR PARA ELIMINAR EL DE ARRIBA
 	bool mover(int x, int y);//nuevo
 
 

@@ -20,7 +20,13 @@ public:
 	float x_obs, y_obs, z_obs;
 	
 protected: 
-	int ratonx,ratony;
+	int ratonx, ratony;
+	int posInicialx, posInicialy;
 	Tablero chessboard;
 	Casilla piezas;
+
+	bool piezaSeleccionada; //true si la se ha seleccionado una pieza
+	bool click; //true si se aplasta el boton izquierdo del raton
+
+
 };

@@ -52,6 +52,20 @@ Pieza* Casilla::seleccionar(int x, int y)
 	return aux;
 }
 
+Pieza* Casilla::elegirPieza(int _x, int _y)
+{
+	bool var;
+	Pieza* aux = 0;
+
+	for (int i = 0; i < tam; i++)
+	{
+		var = piezas[i]->seleccionar(_x, _y);
+		if (var == true)
+			aux = piezas[i];
+	}
+	return aux;
+}
+
 bool Casilla::mover(int x, int y)
 {
 	bool retorno=false;
