@@ -110,7 +110,7 @@ void Mundo::inicializa()
 			piezas.agregar(aux2);
 		}
 	}
-	}
+	
 	
 	
 }
