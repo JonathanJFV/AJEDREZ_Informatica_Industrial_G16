@@ -2,7 +2,7 @@
 
 Torre::Torre()
 {
-	tipo = Pieza::Torre;
+	tipo = Pieza::TORRE;
 	Color = Pieza::NS;
 	posx = -1;
 	posy = -1;
@@ -18,7 +18,7 @@ Torre::Torre()
 }
 Torre::Torre(Pieza::COLOR c, int x, int y)
 {
-	tipo = Pieza::Torre;
+	tipo = Pieza::TORRE;
 	Color = c;
 	posx = x;
 	posy = y;
