@@ -12,7 +12,8 @@
 using namespace std;
 using namespace ETSIDI;
 
-class Tablero
+class Tablero;
+
 class Pieza
 {
 
