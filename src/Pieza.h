@@ -25,18 +25,20 @@ class Pieza
   
     Pieza();
     Pieza(TIPO t, COLOR c, int x, int y);
+    TIPO getTipo() { return tipo; }
+    COLOR getColor() { return Color; }
    
-  	virtual void print();
-	  virtual void dibujar();
-	  virtual bool mover(Casilla incio, Casilla final, Tablero& tablero);//new
-	  virtual bool seleccionar(int x,int y);
+    virtual void print();
+    virtual void dibujar();
+    virtual bool mover(Casilla incio, Casilla final, Tablero& t);//new
+    virtual bool seleccionar(int x,int y);
   
 protected:
   bool seleccionado;
   int posx;
   int posy;
-  TIPO tipo;
-  COLOR Color;
+  TIPO tipo = NF;
+  COLOR Color = NS;
 
 };
 
