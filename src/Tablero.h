@@ -1,6 +1,9 @@
 #pragma once
 #include "Mundo.h"
 
+#define FILAS 8
+#define COLUMNAS 8
+
 class Tablero
 {
 	unsigned char rojo, _rojo;
@@ -12,5 +15,6 @@ public:
 	void dibuja();
 	void setColor(unsigned char r, unsigned char v, unsigned char a,
 		unsigned char _r, unsigned char _v, unsigned char _a);
+	
 };
 
