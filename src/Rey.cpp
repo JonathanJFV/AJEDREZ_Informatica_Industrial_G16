@@ -2,7 +2,7 @@
 
 Rey::Rey()
 {
-	tipo = Pieza::Rey;
+	tipo = Pieza::REY;
 	Color = Pieza::NS;
 	posx = -1;
 	posy = -1;
@@ -18,7 +18,7 @@ Rey::Rey()
 }
 Rey::Rey(Pieza::COLOR c, int x, int y)
 {
-	tipo = Pieza::Rey;
+	tipo = Pieza::REY;
 	Color = c;
 	posx = x;
 	posy = y;
