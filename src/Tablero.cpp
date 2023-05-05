@@ -4,7 +4,7 @@
 
 // funcion principal que dibuja el Tablero
 void Tablero::dibuja() {
-    // TODO: Agregar aquí el código de implementación.
+    // TODO: Agregar aquÃ­ el cÃ³digo de implementaciÃ³n.
 
     for (int fila = 0; fila < 8; fila++)
     {
@@ -52,6 +52,27 @@ void Tablero::dibuja() {
     glEnd();
 
 }
+
+//movimiento de las piezas del tablero
+void Tablero::cambioEstado(Casilla inicio, Casilla final)
+{
+	//PIEZAS COMIDAS
+	if (t[final.fila][final.columna] != nullptr)
+	{
+		Comidas[PComidas++] = t[final.fila][final.columna];
+	}
+	//CAMBIAR A NORMAL 
+	else
+		movimientoEstado(origen, destino);
+}
+//Cambiar el estado del tablero 
+void Tablero::movimientoEstado(Casilla inicio, Casilla final) 
+{
+	t[final.fila][final.columna] = t[inicio.fila][inicio.columna];
+	t[inicio.fila][inicio.columna] = nullptr;
+}
+
+
 
 void Tablero::setColor(unsigned char r, unsigned char v, unsigned char a,
     unsigned char _r, unsigned char _v, unsigned char _a) {
