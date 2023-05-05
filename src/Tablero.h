@@ -1,4 +1,6 @@
 #pragma once
+#include "Mundo.h"
+
 class Tablero
 {
 	unsigned char rojo, _rojo;
