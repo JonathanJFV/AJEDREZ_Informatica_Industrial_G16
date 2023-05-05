@@ -11,6 +11,11 @@ class Tablero
 	unsigned char azul, _azul;
 
 public:
+	Pieza* Comidas[30];
+	int PComidas = 0;
+	Pieza* operator[](Casilla pos) const { return t[pos.fila][pos.columna]; }
+	void cambioEstado(Casilla inicio, Casilla final);
+	void movimientoEstado(Casilla inicio, Casilla final);
 	// funcion principal que dibuja el Tablero
 	void dibuja();
 	void setColor(unsigned char r, unsigned char v, unsigned char a,
