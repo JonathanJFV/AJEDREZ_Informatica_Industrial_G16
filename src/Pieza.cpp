@@ -25,7 +25,7 @@ void Pieza::dibujar()
 {
 }
 
-bool Pieza::mover(Casilla incio, Casilla final, Tablero& t)
+bool Pieza::mover(Casilla inicio, Casilla final, Tablero& t)
 {
 	int aux;
 
@@ -45,37 +45,37 @@ bool Pieza::mover(Casilla incio, Casilla final, Tablero& t)
 	}
 
 	//LINEAL EN COLUMNAS
-	else if (final.columna != final.columna && final.fila == inicio.fila)
+	else if (inicio.columna != final.columna && final.fila == inicio.fila)
 	{
-		aux = (final.columna - incio.columna) / abs(final.columna - incio.columna);
-		while (abs(final.columna - incio.columna) > 1)
+		aux = (final.columna - inicio.columna) / abs(final.columna - inicio.columna);
+		while (abs(final.columna - inicio.columna) > 1)
 		{
-			incio.columna = incio.columna + aux;
-			if (t[incio] != nullptr) return false;
+			inicio.columna = inicio.columna + aux;
+			if (t[inicio] != nullptr) return false;
 		}
 	}
 
 	//DIAGONAL DE IZQUIERDA A DERECHA
-	else if (Casilla::noSaltarDiagonal(incio,final) == true)
+	else if (Casilla::noSaltarDiagonal(inicio,final) == true)
 	{
-		aux = (final.columna - incio.columna) / abs(final.columna - incio.columna);
-		while (abs(final.columna - incio.columna) > 1)
+		aux = (inicio.columna - inicio.columna) / abs(final.columna - inicio.columna);
+		while (abs(inicio.columna - inicio.columna) > 1)
 		{
-			incio.columna = incio.columna + aux;
-			incio.fila = incio.fila + aux;
-			if (t[incio] != nullptr) return false;
+			inicio.columna = inicio.columna + aux;
+			inicio.fila = inicio.fila + aux;
+			if (t[inicio] != nullptr) return false;
 		}
 	}
 
 	//DIAGONAL DE DERECHA A IZQUIERDA
-	else if (final.columna != incio.columna && final.fila != incio.fila)
+	else if (final.columna != inicio.columna && final.fila != inicio.fila)
 	{
-		aux = (final.columna - incio.columna) / abs(final.columna - incio.columna);
-		while (abs(final.columna - incio.columna) > 1)
+		aux = (final.columna - inicio.columna) / abs(final.columna - inicio.columna);
+		while (abs(final.columna - inicio.columna) > 1)
 		{
-			incio.columna = incio.columna + aux;
-			incio.fila = incio.fila - aux;
-			if (t[incio] != nullptr) return false;
+			inicio.columna = inicio.columna + aux;
+			inicio.fila = inicio.fila - aux;
+			if (t[inicio] != nullptr) return false;
 		}
 	}
 
