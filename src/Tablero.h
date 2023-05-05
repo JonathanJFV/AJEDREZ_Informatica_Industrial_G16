@@ -6,6 +6,8 @@
 
 class Tablero
 {
+private:
+	Pieza* t[FILAS][COLUMNAS];
 	unsigned char rojo, _rojo;
 	unsigned char verde, _verde;
 	unsigned char azul, _azul;
