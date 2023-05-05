@@ -12,6 +12,7 @@
 using namespace std;
 using namespace ETSIDI;
 
+class Tablero
 class Pieza
 {
 
@@ -27,7 +28,7 @@ class Pieza
    
   	virtual void print();
 	  virtual void dibujar();
-	  virtual bool mover(int x, int y);//new
+	  virtual bool mover(Casilla incio, Casilla final, Tablero& tablero);//new
 	  virtual bool seleccionar(int x,int y);
   
 protected:
