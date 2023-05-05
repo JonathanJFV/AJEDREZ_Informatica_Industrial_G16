@@ -5,8 +5,8 @@ Pieza::Pieza()
 {
   tipo = NF;
 	Color = NS;
-	posx = -1;
-	posy = -1;
+	posx = 0;
+	posy = 0;
 }
 
 Pieza:: Pieza(TIPO t, COLOR c, int x, int y)

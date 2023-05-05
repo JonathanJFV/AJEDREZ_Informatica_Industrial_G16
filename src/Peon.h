@@ -11,7 +11,7 @@ private:
   
 public:
 	Peon();
-	Peon(Pieza::COLOR c, int x = -1, int y = -1);
+	Peon(Pieza::COLOR c, int x = 0, int y = 0);
 	virtual ~Peon();
 	void print();
 	void dibujar();

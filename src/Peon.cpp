@@ -52,7 +52,7 @@ void Peon::print()
 	default:
 		color = "NS";
 	}
-	cout << "[PEON " << color <<" "<< posx + 1 << "," << posy + 1 << "]" << endl;
+	cout << "[PEON " << color <<" "<< posx << "," << posy << "]" << endl;
 }
 
 void Peon::dibujar()
@@ -62,7 +62,7 @@ void Peon::dibujar()
 	{
 		//dibujar un peon blanco
 		glPushMatrix();
-		glTranslatef(1.325 + pos_x * 0.925, 0.325 + pos_y * 0.925, 1);
+		glTranslatef(1.325 + posx * 0.925, 0.325 + posy * 0.925, 1);
     /*z = 1 para que la figura se ponga por encima del tablero,
 				(1.325, 0.325, 1) es la posición de la primera casilla para el sprite que estamos usado , 
 				+-0.925 es la el valor hay que sumar en x e/u y para cambiar de casilla */

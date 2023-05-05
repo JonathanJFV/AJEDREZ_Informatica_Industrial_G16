@@ -7,21 +7,17 @@
 class Mundo
 {
 public: 
-	void raton(int buton,int estado, int _x, int _y);
+	
 	~Mundo();
 	void tecla(unsigned char key);
 	void inicializa();
-	void rotarOjo();
+	//void rotarOjo(); ///no es necesario, se puede eliminar
 	void mueve();
 	void dibuja();
+	void raton(int buton, int estado, int _x, int _y);
 
-	float x_ojo;
-	float y_ojo;
-	float z_ojo;
-
-	float x_obs;
-	float y_obs;
-	float z_obs;
+	float x_ojo, y_ojo, z_ojo;
+	float x_obs, y_obs, z_obs;
 	
 protected: 
 	int ratonx,ratony;

@@ -6,8 +6,8 @@ Convierta el valor en el tipo más amplio antes de llamar al operador "operator"
 #include "Mundo.h"
 #include "freeglut.h"
 #include <math.h>
-
-void Mundo::rotarOjo()
+/*
+* void Mundo::rotarOjo()
 {
 	float dist=sqrt(x_ojo*x_ojo+z_ojo*z_ojo);
 	float ang=atan2(z_ojo,x_ojo);
@@ -15,27 +15,17 @@ void Mundo::rotarOjo()
 	x_ojo=dist*cos(ang);
 	z_ojo=dist*sin(ang);
 }
+*/
+
 void Mundo::dibuja()
 {
 	gluLookAt(x_ojo, y_ojo, z_ojo,  // posicion del ojo
-			x_obs, y_obs, z_obs,      // hacia que punto mira  (0,0,0) 
-			0.0, 1.0, 0.0);      // definimos hacia arriba (eje Y)    
+			x_obs, y_obs, z_obs,    // hacia que punto mira  (0,0,0) 
+			0.0, 1.0, 0.0);        // definimos hacia arriba (eje Y)    
 
 	//aqui es donde hay que poner el codigo de dibujo
 	//dibujo del suelo
 		
-	/*
-	glDisable(GL_LIGHTING);
-	glBegin(GL_POLYGON);
-		glColor3ub(255,0,0);
-		glVertex3f(-5.0f,0,-5.0f);
-		glVertex3f(-5.0f,0,5.0f);
-		glColor3ub(255,255,0);
-		glVertex3f(5.0f,0,5.0f);	
-		glVertex3f(5.0f,0,-5.0f);
-	glEnd();
-	glEnable(GL_LIGHTING);
-	*/
 
 	chessboard.dibuja();
 	chessboard.setColor(119, 79, 56,
@@ -93,22 +83,23 @@ void Mundo::inicializa()
 void Mundo::raton(int boton, int estado, int _x, int _y)
 {
 	if (boton == GLUT_LEFT_BUTTON && estado == GLUT_DOWN)
-	{
-		//cout << _x << "," << _y<< endl;
-
+	{	//Se obtienen coordenadas relativas a la pantalla
+		//Cursor_x y Cursor_y representan las posiciones
+		//tamaño de casilla (194, 94)
+		//                  (244, 144)
 		for (int i = 0; i < 8; i++)
 		{
-			if (_x > i * 69 + 125 && _x < i * 69 + 125 + 69) {
+			if (_x > (i + 2)*50 + 94 && _x < (i + 3) * 50 + 94) {
 				ratonx = i;
 				for (int j = 0; j < 8; j++)
 				{
-					if (_y > j * 69 + 25 && _y < j * 69 + 25 + 69)
+					if (_y > j * 50 + 94 && _y < (j + 1) * 50 + 94)
 						ratony = 7 - j;
 				}
 			}
 		}
 		cout << _x << "," << _y << endl;
-		cout << ratonx << "," << ratonx << endl;
+		cout << ratonx << "," << ratony << endl;
 
 	}
 }
