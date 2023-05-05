@@ -2,7 +2,7 @@
 
 Reina::Reina()
 {
-	tipo = Pieza::Reina;
+	tipo = Pieza::REINA;
 	Color = Pieza::NS;
 	posx = -1;
 	posy = -1;
@@ -13,12 +13,12 @@ Reina::Reina()
 	sprite_reina_blanco.setSize(0.9, 0.9);
 
 	//un gráfico de reina negra
-	sprite_reian_negro.setCenter(1, 0);
+	sprite_reina_negro.setCenter(1, 0);
 	sprite_reina_negro.setSize(0.9, 0.9);
 }
 Reina::Reina(Pieza::COLOR c, int x, int y)
 {
-	tipo = Pieza::Reina;
+	tipo = Pieza::REINA;
 	Color = c;
 	posx = x;
 	posy = y;
