@@ -21,7 +21,11 @@ public:
 	void dibujar();
 	void destruirContenido();
 	Pieza* seleccionar(int x, int y);//nuevo
-	bool mover(int x,int y);//nuevo
+	bool mover(int x, int y);
+	Casilla(int fila, int columna) :fila(fila), columna(columna) {}
+	static bool mLineal(Casilla inicio, Casilla final);
+	static bool mDiagonal(Casilla inicio, Casilla final);
+	static bool noSaltarDiagonal(Casilla inicio, Casilla final);
 };
 
 
