@@ -5,6 +5,7 @@
 
 #include "ETSIDI.h"
 #include "freeglut.h"
+#include "Casilla.h"
 #include <string>
 #include <iostream>
 
