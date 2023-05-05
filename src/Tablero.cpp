@@ -63,7 +63,7 @@ void Tablero::cambioEstado(Casilla inicio, Casilla final)
 	}
 	//CAMBIAR A NORMAL 
 	else
-		movimientoEstado(origen, destino);
+		movimientoEstado(inicio, final);
 }
 //Cambiar el estado del tablero 
 void Tablero::movimientoEstado(Casilla inicio, Casilla final) 
