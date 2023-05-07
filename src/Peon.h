@@ -20,12 +20,7 @@ public:
 
 	////////////////////////////
 	bool validarMovimiento(int _x, int _y);
-	void muevePos(int _xini, int yini, int xfin, int yfin)
-	{
-		_xini = yini = 0;
-		posx = xfin;
-		posy = yfin;
-	}
+	void muevePos(int _xini, int yini, int xfin, int yfin);
 	///////////////////////////
 };
 

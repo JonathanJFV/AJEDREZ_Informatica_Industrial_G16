@@ -33,7 +33,7 @@ class Pieza
 	  virtual bool validarMovimiento(int _x, int _y) { return false; }
 	  virtual int getPosX() { return posx; }
 	  virtual int getPosY() { return posy; }
-	  virtual void muevePos(int _xini, int yini, int xfin, int yfin){ }
+	  virtual void muevePos(int _xini, int yini, int xfin, int yfin) { ; }
 	  //////////////////////////
   
 protected:

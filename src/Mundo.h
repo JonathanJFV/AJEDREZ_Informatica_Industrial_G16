@@ -1,5 +1,5 @@
 #include"Tablero.h"
-#include "Casilla.h"
+#include "ListaPiezas.h"
 #include "Peon.h"
 #include "Alfil.h"
 #include "Caballo.h"
@@ -26,8 +26,9 @@ protected:
 	int ratonx, ratony;
 	//Vector2D posIni;
 	int posInicialx, posInicialy;
+	int posFinalx, posFinaly;
 	Tablero chessboard;
-	Casilla piezas;
+	ListaPiezas piezas;
 
 	bool piezaSeleccionada; //true si la se ha seleccionado una pieza
 	bool click; //true si se aplasta el boton izquierdo del raton

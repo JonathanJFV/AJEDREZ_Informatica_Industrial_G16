@@ -30,7 +30,7 @@
     <ClCompile Include="src\Peon.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\Castilla.cpp">
+    <ClCompile Include="src\ListaPiezas.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="src\Caballo.cpp">
@@ -53,7 +53,7 @@
     <ClInclude Include="src\Peon.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="src\Casilla.h">
+    <ClInclude Include="src\ListaPiezas.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="src\Caballo.h">

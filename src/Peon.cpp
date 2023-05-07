@@ -57,13 +57,12 @@ void Peon::print()
 
 void Peon::dibujar()
 {
-	//compara todos los piezas, solo hay que cambiar el gráfico
+	//compara todas los piezas, solo hay que cambiar el gráfico
 	if (Color == Pieza::BLANCO) 
 	{
 		//dibujar un peon blanco
 		glPushMatrix();
-		//glTranslatef(1.325 + posx * 0.925, 0.325 + posy * 0.925, 1);
-		glTranslatef(posx, posy , 1);
+		glTranslatef(1.325 + posx * 0.925, 0.325 + posy * 0.925, 1);
     /*z = 1 para que la figura se ponga por encima del tablero,
 				(1.325, 0.325, 1) es la posición de la primera casilla para el sprite que estamos usado , 
 				+-0.925 es la el valor hay que sumar en x e/u y para cambiar de casilla */
@@ -88,7 +87,7 @@ void Peon::dibujar()
 
 bool Peon::mover(int x, int y)
 {
-	if(seleccionado = false)
+	if(seleccionado == false)
 	return false;
 	else
 	{
@@ -97,9 +96,10 @@ bool Peon::mover(int x, int y)
 	}
 }
 
-bool Peon::seleccionar(int x, int y)
+//devuelve true si se ha seleccionado un peón
+bool Peon::seleccionar(int _x, int _y)
 {
-	if (posx == x && posy == y)
+	if (posx == _x && posy == _y)
 	{
 		if (seleccionado == false)
 			seleccionado = true;
@@ -110,6 +110,16 @@ bool Peon::seleccionar(int x, int y)
 }
 
 /////////////////////////////////////////////
+void Peon::muevePos(int xini, int yini, int xfin, int yfin)
+{
+	if (validarMovimiento(xfin, yfin))
+	{
+		posx += xfin;
+		posy += yfin;
+	}
+}
+
+
 bool Peon::validarMovimiento(int _x, int _y)
 {
 //si la posicion de la pieza es igual a la elegida por el raton devuelve true
