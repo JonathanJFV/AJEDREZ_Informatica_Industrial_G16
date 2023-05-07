@@ -119,8 +119,12 @@ void Mundo::raton(int boton, int estado, int _x, int _y)
 		{
 			cout << "casilla vacia" << endl;
 			piezaSeleccionada = false;
-			posFinalx = ratonx;
-			posFinaly = ratony;
+			if (piezaSeleccionada)
+			{
+				posFinalx = ratonx;
+				posFinaly = ratony;
+			}
+
 		}
 		else
 		{
@@ -134,7 +138,7 @@ void Mundo::raton(int boton, int estado, int _x, int _y)
 		cout << ratonx << "," << ratony << endl;
 		cout << "posGuardada INICIAL: ";
 		cout << posInicialx << "," << posInicialy << endl;
-		cout << "posicion FINAL:" << endl;
+		cout << "posicion FINAL: ";
 		cout << posFinalx << "," << posFinaly << endl;
 		//cout << click << endl; //true si hace click dentro del tablero
 	}
