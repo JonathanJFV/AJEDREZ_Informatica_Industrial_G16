@@ -37,18 +37,14 @@ void Mundo::dibuja()
 
 void Mundo::mueve()
 {
-	if (piezaSeleccionada == false && click == true)
+	if (piezaSeleccionada && click)
 	{
-
+		piezas.moverPiezaHasta(posInicialx, posInicialy, ratonx, ratony);
 	}
-
 
 //piezas.mover(ratonx, ratony);
 	//ratonx = -1;
 	//ratony = -1;
-
-
-
 
 }
 
@@ -60,7 +56,7 @@ void Mundo::inicializa()
 	ratonx = -1;
 	ratony = -1;
 
-	piezaSeleccionada = false;
+	//piezaSeleccionada = false;
 	click = false;
 
 	
@@ -94,28 +90,51 @@ void Mundo::raton(int boton, int estado, int _x, int _y)
 	if (boton == GLUT_LEFT_BUTTON && estado == GLUT_DOWN)
 	{	
 		//comprueba si el click del raton está fuera del tablero
-		if ((_x < 194 || _x < 604) || (_y < 94 || _y>504))
+		if ((_x < 194 || _x > 594) || (_y < 94 || _y > 494))
+		{
 			click = false;
-
+			ratonx = ratony = -1; //para posiciones fuera del tablero
+		}
+		else
 		/*Se obtienen coordenadas relativas a la pantalla
 		Cursor_x y Cursor_y representan las posiciones
 		tamaño de casilla (194, 94)
 		                  (244, 144)*/
 		for (int i = 0; i < 8; i++)
 		{
-			if (_x > (i + 2)*50 + 94 && _x < (i + 3) * 50 + 94) {
+			if (_x > (i + 2) * 50 + 94 && _x < (i + 3) * 50 + 94)
+			{
 				ratonx = i;
 				for (int j = 0; j < 8; j++)
 				{
 					if (_y > j * 50 + 94 && _y < (j + 1) * 50 + 94)
 						ratony = 7 - j;
 				}
+				click = true;
 			}
 		}
-		cout << _x << "," << _y << endl;
+
+		Pieza* p = piezas.elegirPieza(ratonx, ratony);
+		if (p == nullptr)
+		{
+			cout << "casilla vacia" << endl;
+			piezaSeleccionada = false;
+		}
+		else
+		{
+			posInicialx = ratonx;
+			posInicialy = ratony;
+			cout << "casilla con pieza" << endl;
+			piezaSeleccionada = true;
+		}
+
+		//cout << _x << "," << _y << endl;
 		cout << ratonx << "," << ratony << endl;
-		click = true;
+		cout << "posGurdada: ";
+		cout << posInicialx << "," << posInicialy << endl;
+		//cout << click << endl; //true si hace click dentro del tablero
 	}
+
 
 		//AUUN POR COMPROBAR POSIBLES INTERACCIONES CON OTOS BOTONES DEL RATON
 

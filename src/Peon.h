@@ -17,6 +17,16 @@ public:
 	void dibujar();
 	bool mover(int x, int y);//new
 	bool seleccionar(int x, int y);
+
+	////////////////////////////
+	bool validarMovimiento(int _x, int _y);
+	void muevePos(int _xini, int yini, int xfin, int yfin)
+	{
+		_xini = yini = 0;
+		posx = xfin;
+		posy = yfin;
+	}
+	///////////////////////////
 };
 
 

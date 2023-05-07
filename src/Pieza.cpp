@@ -34,3 +34,5 @@ bool Pieza::seleccionar(int x, int y)
 {
 	return false;
 }
+
+

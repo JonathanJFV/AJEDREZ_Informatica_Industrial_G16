@@ -19,7 +19,17 @@ public:
 	Pieza* elegirPieza(int _x, int _y); ///CONFIRMAR PARA ELIMINAR EL DE ARRIBA
 	bool mover(int x, int y);//nuevo
 
-
+	///////////////////////////////
+	void moverPiezaHasta(int xini, int yini, int xfin, int yfin)
+	{
+		Pieza* p = 0;
+		p = seleccionar(xini, yini);
+		if (p!=nullptr)
+		{
+			p->muevePos(xini, yini, xfin, yfin);
+		}
+	}
+	/////////////////////////////
 private:
 	int tam;
 	Pieza* piezas[MAX];

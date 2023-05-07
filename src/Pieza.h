@@ -28,6 +28,13 @@ class Pieza
 	  virtual void dibujar();
 	  virtual bool mover(int x, int y);//new
 	  virtual bool seleccionar(int x,int y);
+
+	/////////////////////////////
+	  virtual bool validarMovimiento(int _x, int _y) { return false; }
+	  virtual int getPosX() { return posx; }
+	  virtual int getPosY() { return posy; }
+	  virtual void muevePos(int _xini, int yini, int xfin, int yfin){ }
+	  //////////////////////////
   
 protected:
   bool seleccionado;
