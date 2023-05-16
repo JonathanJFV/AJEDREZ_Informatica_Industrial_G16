@@ -150,7 +150,7 @@ void Mundo::raton(int boton, int estado, int _x, int _y)
 
 Mundo::~Mundo()
 {
-	piezas.destruirContenido();
+	//piezas.destruirContenido();
 }
 
 void Mundo::tecla(unsigned char key)
