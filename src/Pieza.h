@@ -19,23 +19,29 @@ class Pieza
 	enum TIPO{NF = -1, PEON, ALFIL, CABALLO, REINA, REY, TORRE};
 	int fila = 0, columna = 0;
 
+protected:
+	bool seleccionado;
+	int posx;
+	int posy;
+	TIPO tipo = NF;
+	COLOR color = NS;
+public:
     Pieza();
     Pieza(TIPO t, COLOR c, int x, int y);
 	Pieza(int fila, int columna) :fila(fila), columna(columna) {}
+
+	TIPO getPieza() { return tipo; }
+	COLOR getColor() { return color; }
+
   	  virtual void print();
 	  virtual void dibujar();
 	  //virtual bool seleccionar(int x,int y);
 	  static bool mover(Pieza inicio, Pieza fin, Tablero& t);
 	  static bool mLineal(Pieza inicio, Pieza fin);
 	  static bool mDiagonal(Pieza inicio, Pieza fin);
-  
-protected:
-  bool seleccionado;
-  int posx;
-  int posy;
-  TIPO tipo;
-  COLOR Color;
+	  static bool noSaltarDiagonal(Pieza inicio, Pieza fin);
 
 };
 
 #endif
+
