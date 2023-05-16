@@ -58,7 +58,7 @@ bool Pieza::mover(Pieza inicio, Pieza fin, Tablero& t)
 	int aux;
 
 	//Se revisa si la casilla está ocupada por una pieza del mismo color que el turno 
-	if (t[fin] != nullptr && t[fin]->getColor() == color) return false;
+	if (t[fin] != nullptr && t[fin]->getColor() == NS) return false;
 
 	//COMPROBACION DE TRAYECTORIA. Objetivo: no saltar entre piezas
 	//LINEAL EN FILAS 
