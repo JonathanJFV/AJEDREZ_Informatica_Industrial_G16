@@ -2,6 +2,40 @@
 #include "freeglut.h"
 #pragma warning( disable : 26451 )
 
+Tablero::Tablero()
+{
+    for (int fila = 0; fila < N_FILAS; fila++)
+    {
+        for (int columna = 0; columna < N_COLUMNAS; columna++)
+        {
+            tab[fila][columna] = nullptr;
+        }
+    }
+
+    tab[0][4] = new Rey(Pieza::BLANCA);
+    tab[7][4] = new Rey(Pieza::NEGRA);
+    tab[0][0] = new Torre(Pieza::BLANCA);
+    tab[0][7] = new Torre(Pieza::BLANCA);
+    tab[7][0] = new Torre(Pieza::NEGRA);
+    tab[7][7] = new Torre(Pieza::NEGRA);
+    tab[0][2] = new Alfil(Pieza::BLANCA);
+    tab[0][5] = new Alfil(Pieza::BLANCA);
+    tab[7][2] = new Alfil(Pieza::NEGRA);
+    tab[7][5] = new Alfil(Pieza::NEGRA);
+    tab[0][3] = new Reina(Pieza::BLANCA);
+    tab[7][3] = new Reina(Pieza::NEGRA);
+    tab[0][1] = new Caballo(Pieza::BLANCA);
+    tab[0][6] = new Caballo(Pieza::BLANCA);
+    tab[7][1] = new Caballo(Pieza::NEGRA);
+    tab[7][6] = new Caballo(Pieza::NEGRA);
+    for (int i = 0; i < 8; i++)
+    {
+        tab[1][i] = new Peon(Pieza::BLANCA);
+        tab[6][i] = new Peon(Pieza::NEGRA);
+    }
+
+}
+
 // funcion principal que dibuja el Tablero
 void Tablero::dibuja() {
     // TODO: Agregar aquí el código de implementación.
