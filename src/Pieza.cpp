@@ -110,3 +110,14 @@ bool Pieza::mover(Pieza inicio, Pieza fin, Tablero& t)
 	return true;
 }
 
+bool Pieza::mPeonblanco(Pieza inicio, Pieza fin)
+{
+	if (fin.fila == inicio.fila + 1 && fin.columna == inicio.columna) return true;
+	return false;
+}
+bool Pieza::mPeonnegro(Pieza inicio, Pieza fin)
+{
+	if (fin.fila == inicio.fila - 1 && fin.columna == inicio.columna) return true;
+	return false;
+}
+
