@@ -43,10 +43,10 @@ void Reina::print()
 	string color;
 	switch (Color)
 	{
-	case Pieza::BLANCO:
+	case Pieza::BLANCA:
 		color = "BLANCO";
 		break;
-	case Pieza::NEGRO:
+	case Pieza::NEGRA:
 		color = "NEGRO";
 		break;
 	default:
@@ -58,7 +58,7 @@ void Reina::print()
 void Reina::dibujar()
 {
 	//compara todos los piezas, solo hay que cambiar el gráfico
-	if (Color == Pieza::BLANCO)
+	if (Color == Pieza::BLANCA)
 	{
 		//dibujar una reina blanca
 		glPushMatrix();
@@ -71,7 +71,7 @@ void Reina::dibujar()
 		glPopMatrix();
 	}
 
-	if (Color == Pieza::NEGRO)
+	if (Color == Pieza::NEGRA)
 	{
 		//dibujar una reina negra
 		glPushMatrix();
