@@ -36,7 +36,7 @@ public:
   	  virtual void print();
 	  virtual void dibujar();
 	  //virtual bool seleccionar(int x,int y);
-	  static bool mover(Pieza inicio, Pieza fin, Tablero& t);
+	  virtual bool mover(Pieza inicio, Pieza fin, Tablero& t);
 	  static bool mLineal(Pieza inicio, Pieza fin);
 	  static bool mDiagonal(Pieza inicio, Pieza fin);
 	  static bool noSaltarDiagonal(Pieza inicio, Pieza fin);
