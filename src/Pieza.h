@@ -45,6 +45,7 @@ public:
 	  static bool primermPeonblanco(Pieza inicio, Pieza fin);
 	  static bool primermPeonnegro(Pieza inicio, Pieza fin);
 	  static bool comePeonblanco(Pieza inicio, Pieza fin);
+	  static bool comePeonnegro(Pieza inicio, Pieza fin);
 };
 
 #endif
