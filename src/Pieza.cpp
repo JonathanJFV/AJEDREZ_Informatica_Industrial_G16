@@ -121,3 +121,14 @@ bool Pieza::mPeonnegro(Pieza inicio, Pieza fin)
 	return false;
 }
 
+bool Pieza::primermPeonblanco(Pieza inicio, Pieza fin)
+{
+	if (fin.fila == inicio.fila + 2 && fin.columna == inicio.columna) return true;
+	return false;
+}
+
+bool Pieza::primermPeonnegro(Pieza inicio, Pieza fin)
+{
+	if (fin.fila == inicio.fila - 2 && fin.columna == inicio.columna) return true;
+	return false;
+}
