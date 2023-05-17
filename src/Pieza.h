@@ -40,7 +40,8 @@ public:
 	  static bool mLineal(Pieza inicio, Pieza fin);
 	  static bool mDiagonal(Pieza inicio, Pieza fin);
 	  static bool noSaltarDiagonal(Pieza inicio, Pieza fin);
-
+	  static bool mPeonblanco(Pieza inicio, Pieza fin);
+	  static bool mPeonnegro(Pieza inicio, Pieza fin);
 };
 
 #endif
