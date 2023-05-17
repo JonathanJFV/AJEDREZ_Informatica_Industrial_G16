@@ -138,3 +138,9 @@ bool Pieza::comePeonblanco(Pieza inicio, Pieza fin)
 	if ((abs(fin.columna - inicio.columna) == 1) && (fin.fila == inicio.fila + 1)) return true;
 	return false;
 }
+
+bool Pieza::comePeonnegro(Pieza inicio, Pieza fin)
+{
+	if ((abs(fin.columna - inicio.columna) == 1) && (fin.fila == inicio.fila - 1)) return true;
+	return false;
+}
