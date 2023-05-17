@@ -24,14 +24,14 @@ protected:
 	int posx;
 	int posy;
 	TIPO tipo = NF;
-	COLOR color = NS;
+	COLOR Color = NS;
 public:
     Pieza();
     Pieza(TIPO t, COLOR c, int x, int y);
 	Pieza(int fila, int columna) :fila(fila), columna(columna) {}
 
 	TIPO getPieza() { return tipo; }
-	COLOR getColor() { return color; }
+	COLOR getColor() { return Color; }
 
   	  virtual void print();
 	  virtual void dibujar();
