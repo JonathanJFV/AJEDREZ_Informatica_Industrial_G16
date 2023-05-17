@@ -42,6 +42,8 @@ public:
 	  static bool noSaltarDiagonal(Pieza inicio, Pieza fin);
 	  static bool mPeonblanco(Pieza inicio, Pieza fin);
 	  static bool mPeonnegro(Pieza inicio, Pieza fin);
+	   static bool primermPeonblanco(Pieza inicio, Pieza fin);
+	  static bool primermPeonnegro(Pieza inicio, Pieza fin);
 };
 
 #endif
