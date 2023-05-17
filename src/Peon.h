@@ -16,8 +16,8 @@ public:
 	virtual ~Peon();
 	void print();
 	void dibujar();
-	bool mover(int x, int y);//new
 	bool seleccionar(int x, int y);
+	virtual bool mover(Pieza inicio, Pieza fin, Tablero& t);
 };
 
 
