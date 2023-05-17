@@ -1,6 +1,7 @@
 #ifndef PEON_H
 #define PEON_H
 #include "Pieza.h"
+#include "Tablero.h
 
 class Peon:public Pieza  
 {
