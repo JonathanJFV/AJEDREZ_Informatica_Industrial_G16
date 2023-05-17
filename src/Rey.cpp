@@ -43,10 +43,10 @@ void Rey::print()
 	string color;
 	switch (Color)
 	{
-	case Pieza::BLANCO:
+	case Pieza::BLANCA:
 		color = "BLANCO";
 		break;
-	case Pieza::NEGRO:
+	case Pieza::NEGRA:
 		color = "NEGRO";
 		break;
 	default:
@@ -58,7 +58,7 @@ void Rey::print()
 void Rey::dibujar()
 {
 	//compara todos los piezas, solo hay que cambiar el gráfico
-	if (Color == Pieza::BLANCO)
+	if (Color == Pieza::BLANCA)
 	{
 		//dibujar un rey blanco
 		glPushMatrix();
@@ -71,7 +71,7 @@ void Rey::dibujar()
 		glPopMatrix();
 	}
 
-	if (Color == Pieza::NEGRO)
+	if (Color == Pieza::NEGRA)
 	{
 		//dibujar un rey negro
 		glPushMatrix();
