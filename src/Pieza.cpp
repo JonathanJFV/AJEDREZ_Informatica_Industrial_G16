@@ -150,3 +150,9 @@ bool Pieza::muno(Pieza inicio, Pieza fin)
 	if (abs(fin.fila - inicio.fila) <= 1 && abs(fin.columna - inicio.columna) <= 1) return true;
 	return false;
 }
+
+bool Pieza::mCaballo(Pieza inicio, Pieza fin)
+{
+	if (((abs(fin.fila - inicio.fila) == 1) && (abs(fin.columna - inicio.columna) == 2)) || ((abs(fin.fila - inicio.fila) == 2) && (abs(fin.columna - inicio.columna) == 1))) return true;
+	return false;
+}
