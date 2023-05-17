@@ -144,3 +144,9 @@ bool Pieza::comePeonnegro(Pieza inicio, Pieza fin)
 	if ((abs(fin.columna - inicio.columna) == 1) && (fin.fila == inicio.fila - 1)) return true;
 	return false;
 }
+
+bool Pieza::muno(Pieza inicio, Pieza fin)
+{
+	if (abs(fin.fila - inicio.fila) <= 1 && abs(fin.columna - inicio.columna) <= 1) return true;
+	return false;
+}
