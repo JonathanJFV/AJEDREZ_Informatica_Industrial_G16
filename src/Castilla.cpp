@@ -15,26 +15,26 @@ void Casilla::destruirContenido()
 
 Pieza* Casilla::seleccionar(int x, int y)
 {
-	bool var;
-	Pieza* aux=0;
-	for (int i = 0;i < tam;i++)
-	{
-		var = piez[i]->seleccionar(x, y);
-		if (var == true)
-			aux = piez[i];
-	}
-	return aux;
+	//bool var;
+	//Pieza* aux=0;
+	//for (int i = 0;i < tam;i++)
+	//{
+	//	var = piez[i]->seleccionar(x, y);
+	//	if (var == true)
+	//		aux = piez[i];
+	//}
+//	return aux;
 }
 
 bool Casilla::mover(int x, int y)
 {
-	bool retorno=false;
-	Pieza* aux = 0;
-	aux = seleccionar(x, y);
-	if (aux == 0)
-		return retorno;
-	retorno = aux->mover(x, y);
-	return retorno;
+	//bool retorno=false;
+	//Pieza* aux = 0;
+	///aux = seleccionar(x, y);
+	//if (aux == 0)
+	//	return retorno;
+	//retorno = aux->mover(x, y);
+	//return retorno;
 }
 
 

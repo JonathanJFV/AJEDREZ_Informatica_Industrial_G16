@@ -38,21 +38,23 @@ Peon::~Peon()
 
 //Constructor que pasa los parametros al clase base
 
+
 void Peon::print()
 {
-	string color;
+	/*	string Color;
 	switch (Color)
 	{
 	case Pieza::BLANCO:
-		color = "BLANCO";
+		Color = "BLANCO";
 		break;
 	case Pieza::NEGRO:
-		color = "NEGRO";
+		Color = "NEGRO";
 		break;
 	default:
-		color = "NS";
+		Color = "NS";
 	}
-	cout << "[PEON " << color <<" "<< posx + 1 << "," << posy + 1 << "]" << endl;
+	cout << "[PEON " << Color <<" "<< posx + 1 << "," << posy + 1 << "]" << endl;*/
+
 }
 
 void Peon::dibujar()

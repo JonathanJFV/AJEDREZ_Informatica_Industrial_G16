@@ -8,32 +8,11 @@ Tablero::Tablero()
     {
         for (int columna = 0; columna < N_COLUMNAS; columna++)
         {
-            tab[fila][columna] = nullptr;
+           // tab[fila][columna] = nullptr;
+            t[fila][columna] = nullptr;
         }
     }
-
-    tab[0][4] = new Rey(Pieza::BLANCA);
-    tab[7][4] = new Rey(Pieza::NEGRA);
-    tab[0][0] = new Torre(Pieza::BLANCA);
-    tab[0][7] = new Torre(Pieza::BLANCA);
-    tab[7][0] = new Torre(Pieza::NEGRA);
-    tab[7][7] = new Torre(Pieza::NEGRA);
-    tab[0][2] = new Alfil(Pieza::BLANCA);
-    tab[0][5] = new Alfil(Pieza::BLANCA);
-    tab[7][2] = new Alfil(Pieza::NEGRA);
-    tab[7][5] = new Alfil(Pieza::NEGRA);
-    tab[0][3] = new Reina(Pieza::BLANCA);
-    tab[7][3] = new Reina(Pieza::NEGRA);
-    tab[0][1] = new Caballo(Pieza::BLANCA);
-    tab[0][6] = new Caballo(Pieza::BLANCA);
-    tab[7][1] = new Caballo(Pieza::NEGRA);
-    tab[7][6] = new Caballo(Pieza::NEGRA);
-    for (int i = 0; i < 8; i++)
-    {
-        tab[1][i] = new Peon(Pieza::BLANCA);
-        tab[6][i] = new Peon(Pieza::NEGRA);
-    }
-
+    //tab[0][4] = new Rey(Pieza::BLANCO);
 }
 
 // funcion principal que dibuja el Tablero
@@ -93,7 +72,7 @@ void Tablero::cambioEstado(Casilla inicio, Casilla final)
 	//PIEZAS COMIDAS
 	if (t[final.fila][final.columna] != nullptr)
 	{
-		Comidas[PComidas++] = t[final.fila][final.columna];
+		//Comidas[PComidas++] = t[final.fila][final.columna];
 	}
 	//CAMBIAR A NORMAL 
 	else
@@ -113,4 +92,33 @@ void Tablero::setColor(unsigned char r, unsigned char v, unsigned char a,
     rojo = r, _rojo = _r;
     verde = v, _verde = _v;
     azul = a, _azul = _a;
+}
+
+void Tablero::inicializa()
+{
+    PComidas = 0;
+
+    /*
+    tab[0][4] = new Rey(Pieza::BLANCO);
+    tab[7][4] = new Rey(Pieza::NEGRO);
+    tab[0][0] = new Torre(Pieza::BLANCO);
+    tab[0][7] = new Torre(Pieza::BLANCO);
+    tab[7][0] = new Torre(Pieza::NEGRO);
+    tab[7][7] = new Torre(Pieza::NEGRO);
+    tab[0][2] = new Alfil(Pieza::BLANCO);
+    tab[0][5] = new Alfil(Pieza::BLANCO);
+    tab[7][2] = new Alfil(Pieza::NEGRO);
+    tab[7][5] = new Alfil(Pieza::NEGRO);
+    tab[0][3] = new Reina(Pieza::BLANCO);
+    tab[7][3] = new Reina(Pieza::NEGRO);
+    tab[0][1] = new Caballo(Pieza::BLANCO);
+    tab[0][6] = new Caballo(Pieza::BLANCO);
+    tab[7][1] = new Caballo(Pieza::NEGRO);
+    tab[7][6] = new Caballo(Pieza::NEGRO);
+    for (int i = 0; i < 8; i++)
+    {
+        tab[1][i] = new Peon(Pieza::BLANCO);
+        tab[6][i] = new Peon(Pieza::NEGRO);
+    }*/
+    
 }

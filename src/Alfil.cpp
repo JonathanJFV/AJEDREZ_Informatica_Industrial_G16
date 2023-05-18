@@ -37,22 +37,23 @@ Alfil::~Alfil()
 
 
 //Constructor que pasa los parametros al clase base
-
 void Alfil::print()
 {
-	string color;
+/*
+	string Color;
 	switch (Color)
 	{
 	case Pieza::BLANCO:
-		color = "BLANCO";
+		Color = "BLANCO";
 		break;
 	case Pieza::NEGRO:
-		color = "NEGRO";
+		Color = "NEGRO";
 		break;
 	default:
-		color = "NS";
+		Color = "NS";
 	}
-	cout << "[ALFIL " << color << " " << posx + 1 << "," << posy + 1 << "]" << endl;
+	cout << "[ALFIL " << Color << " " << posx + 1 << "," << posy + 1 << "]" << endl;
+*/
 }
 
 void Alfil::dibujar()

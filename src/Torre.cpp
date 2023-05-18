@@ -40,19 +40,22 @@ Torre::~Torre()
 
 void Torre::print()
 {
-	string color;
+	/*
+	string Color;
 	switch (Color)
 	{
 	case Pieza::BLANCO:
-		color = "BLANCO";
+		Color = "BLANCO";
 		break;
 	case Pieza::NEGRO:
-		color = "NEGRO";
+		Color = "NEGRO";
 		break;
 	default:
-		color = "NS";
+		Color = "NS";
 	}
-	cout << "[TORRE " << color << " " << posx + 1 << "," << posy + 1 << "]" << endl;
+	cout << "[TORRE " << Color << " " << posx + 1 << "," << posy + 1 << "]" << endl;
+	*/
+	
 }
 
 void Torre::dibujar()

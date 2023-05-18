@@ -583,8 +583,8 @@ FGAPI void    FGAPIENTRY glutVideoPan( int x, int y, int width, int height );
 /*
  * Colormap functions, see fg_misc.c
  */
-FGAPI void    FGAPIENTRY glutSetColor( int color, GLfloat red, GLfloat green, GLfloat blue );
-FGAPI GLfloat FGAPIENTRY glutGetColor( int color, int component );
+FGAPI void    FGAPIENTRY glutSetColor( int Color, GLfloat red, GLfloat green, GLfloat blue );
+FGAPI GLfloat FGAPIENTRY glutGetColor( int Color, int component );
 FGAPI void    FGAPIENTRY glutCopyColormap( int window );
 
 /*
