@@ -48,6 +48,7 @@ public:
 	  static bool comePeonnegro(Pieza inicio, Pieza fin);
 	  static bool muno(Pieza inicio, Pieza fin);
 	  static bool mCaballo(Pieza inicio, Pieza fin);
+	  static bool fueraTablero(Pieza p);
 };
 
 #endif
