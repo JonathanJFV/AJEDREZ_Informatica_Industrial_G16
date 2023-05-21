@@ -14,7 +14,7 @@ public:
 	virtual ~Torre();
 	void print();
 	void dibujar();
-	bool mover(int x, int y);//new
+	virtual bool mover(Pieza inicio, Pieza fin, Tablero& t);
 	bool seleccionar(int x, int y);
 };
 
