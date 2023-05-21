@@ -6,7 +6,7 @@
 class Alfil :public Pieza
 {
 private:
-	//con la libreria de etsidi añade el dibujo de ALFIL
+	//con la libreria de etsidi aÃ±ade el dibujo de ALFIL
 	SpriteSequence sprite_alfil_blanco{ "bin/imagenes/alfil_blanco.png", 1 };
 	SpriteSequence sprite_alfil_negro{ "bin/imagenes/alfil_negro.png", 1 };
 
@@ -16,12 +16,8 @@ public:
 	virtual ~Alfil();
 	void print();
 	void dibujar();
-	bool mover(int x, int y);//new
+	virtual bool mover(int x, int y);//new
 	bool seleccionar(int x, int y);
 };
-
-
-
-
 
 #endif
