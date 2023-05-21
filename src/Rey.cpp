@@ -85,15 +85,12 @@ void Rey::dibujar()
 	}
 }
 
-bool Rey::mover(int x, int y)
+bool Rey::mover(Pieza incio, Pieza fin, Tablero& t)
 {
-	if (seleccionado = false)
-		return false;
-	else
-	{
-		print();
-		return true;
-	}
+	if (Pieza::muno(incio, fin) == true)
+		return Pieza::mover(incio, fin, t);
+
+	return false;
 }
 
 bool Rey::seleccionar(int x, int y)
