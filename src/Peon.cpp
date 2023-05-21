@@ -1,4 +1,5 @@
 #include "Peon.h"
+#include "Tablero.h"
 
 Peon::Peon()
 {
@@ -85,15 +86,47 @@ void Peon::dibujar()
 	}
 }
 
-bool Peon::mover(int x, int y)
+
+bool Peon::mover(Pieza origen, Pieza destino, Tablero& tablero)
 {
-	if(seleccionado = false)
-	return false;
-	else
+	if (color == BLANCA)
 	{
-		print();
-		return true;
+		if (origen.fila == 1)
+		{
+			if ((Pieza::primermPeonblanco(origen, destino) == true && tablero[destino] == nullptr)|| (Pieza::mPeonblanco(origen, destino) == true && tablero[destino] == nullptr) || ((Pieza::comePeonblanco(origen, destino) == true) && tablero[destino] != nullptr && tablero[destino]->getColor() != color))
+				return Pieza::mover(origen, destino, tablero);
+
+		}
+
+		else if (origen.fila != 1)
+		{
+			if ((Pieza::mPeonblanco(origen, destino) == true) && tablero[destino] == nullptr)
+				return Pieza::mover(origen, destino, tablero);
+
+			else if ((Pieza::comePeonblanco(origen, destino) == true) && tablero[destino] != nullptr)
+				return Pieza::mover(origen, destino, tablero);
+		}
 	}
+
+	else if (color == NEGRA)
+	{
+		if (origen.fila == 6)
+		{
+			if ((Pieza::primermPeonnegro(origen, destino) == true && tablero[destino] == nullptr) || (Pieza::mPeonnegro(origen, destino) == true && tablero[destino] == nullptr) || ((Pieza::comePeonnegro(origen, destino) == true) && tablero[destino] != nullptr && tablero[destino]->getColor() != color))
+				return Pieza::mover(origen, destino, tablero);
+		}
+
+		else if (origen.fila != 6)
+		{
+			if ((Pieza::mPeonnegro(origen, destino) == true) && tablero[destino] == nullptr)
+				return Pieza::mover(origen, destino, tablero);
+
+			else if ((Pieza::comePeonnegro(origen, destino) == true) && tablero[destino] != nullptr)
+				return Pieza::mover(origen, destino, tablero);
+		}
+	}
+
+	return false;
 }
 
 bool Peon::seleccionar(int x, int y)
