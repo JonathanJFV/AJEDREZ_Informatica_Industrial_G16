@@ -85,15 +85,12 @@ void Caballo::dibujar()
 	}
 }
 
-bool Caballo::mover(int x, int y)
+bool Caballo::mover(Pieza inicio, Pieza fin, Tablero& t)
 {
-	if (seleccionado = false)
-		return false;
-	else
-	{
-		print();
-		return true;
-	}
+	if (Pieza::mCaballo(inicio, fin) == true)
+		return Pieza::mover(inicio, fin, t);
+
+	return false;
 }
 
 bool Caballo::seleccionar(int x, int y)
