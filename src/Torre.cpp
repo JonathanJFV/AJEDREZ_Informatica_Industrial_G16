@@ -85,15 +85,12 @@ void Torre::dibujar()
 	}
 }
 
-bool Torre::mover(int x, int y)
+bool Torre::mover(Pieza inicio, Pieza fin, Tablero& t)
 {
-	if (seleccionado = false)
-		return false;
-	else
-	{
-		print();
-		return true;
-	}
+	if (Pieza::mLineal(inicio, fin) == true)
+		return Pieza::mover(inicio, fin, t);
+
+	return false;
 }
 
 bool Torre::seleccionar(int x, int y)
