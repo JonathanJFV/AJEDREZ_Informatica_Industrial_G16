@@ -85,15 +85,12 @@ void Alfil::dibujar()
 	}
 }
 
-bool Alfil::mover(int x, int y)
+bool Alfil::mover(Pieza inicio, Pieza fin, Tablero& t)
 {
-	if (seleccionado = false)
-		return false;
-	else
-	{
-		print();
-		return true;
-	}
+	if (Pieza::mDiagonal(inicio, fin) == true)
+		return Pieza::mover(inicio, fin, t);
+
+	return false;
 }
 
 bool Alfil::seleccionar(int x, int y)
